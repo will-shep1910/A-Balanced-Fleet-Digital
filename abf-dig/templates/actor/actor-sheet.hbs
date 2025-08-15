@@ -1,0 +1,132 @@
+<form class="actor-sheet">
+  <header>
+    <h1>{{actor.name}}</h1>
+    <p><strong>Type:</strong> {{actor.type}}</p>
+  </header>
+
+  <section class="sheet-body">
+    {{#if (eq actor.type "redShip")}}
+      <section class="ship-section red-ship">
+        <h2>Red Ship Status</h2>
+        {{#if system.attributes.health}}
+          <label for="health-value">Health:</label>
+          <input type="number" name="system.attributes.health.value" id="health-value"
+                 value="{{system.attributes.health.value}}" 
+                 min="{{system.attributes.health.min}}" max="{{system.attributes.health.max}}" />
+          / {{system.attributes.health.max}}
+        {{else}}
+          <p>No health data</p>
+        {{/if}}
+
+        <section>
+          <h3>Ammunition</h3>
+          <ul class="ammo-list">
+            <li><strong>Missile Attack Ammo:</strong> {{ammoCounts.atkammo}}</li>
+            <li><strong>Missile Defense Ammo:</strong> {{ammoCounts.defammo}}</li>
+            <li><strong>CIWS Ammo:</strong> {{ammoCounts.ciwsammo}}</li>
+          </ul>
+        </section>
+
+        <h3>Items</h3>
+        <ul>
+          {{#each items}}
+            <li>{{name}} (Type: {{type}})
+              {{#if (eq type "missileAtk")}}
+                Damage: {{system.damage}}<br/>
+                Ammo: <input type="number" min="0" max="{{system.atkammo.max}}" 
+                             class="ammo-input" 
+                             data-item-id="{{_id}}" 
+                             data-ammo-type="atkammo"
+                             value="{{system.atkammo.value}}" />
+              {{/if}}
+
+              {{#if (eq type "missileDef")}}
+                Ammo: <input type="number" min="0" max="{{system.defammo.max}}" 
+                             class="ammo-input" 
+                             data-item-id="{{_id}}" 
+                             data-ammo-type="defammo"
+                             value="{{system.defammo.value}}" />
+              {{/if}}
+
+              {{#if (eq type "ciws")}}
+                Ammo: <input type="number" min="0" max="{{system.ciwsammo.max}}" 
+                             class="ammo-input" 
+                             data-item-id="{{_id}}" 
+                             data-ammo-type="ciwsammo"
+                             value="{{system.ciwsammo.value}}" />
+              {{/if}}
+
+              {{#if (eq type "radar")}}
+                Active: {{system.active}}<br/>
+                Active Ship Range: {{system.activeShipRange}}<br/>
+                Passive Ship Range: {{system.passiveShipRange}}
+              {{/if}}
+            </li>
+          {{/each}}
+        </ul>
+      </section>
+    {{/if}}
+
+    {{#if (eq actor.type "blueShip")}}
+      <section class="ship-section blue-ship">
+        <h2>Blue Ship Status</h2>
+        {{#if system.attributes.health}}
+          <label for="health-value">Health:</label>
+          <input type="number" name="system.attributes.health.value" id="health-value"
+                 value="{{system.attributes.health.value}}" 
+                 min="{{system.attributes.health.min}}" max="{{system.attributes.health.max}}" />
+          / {{system.attributes.health.max}}
+        {{else}}
+          <p>No health data</p>
+        {{/if}}
+
+        <section>
+          <h3>Ammunition</h3>
+          <ul class="ammo-list">
+            <li><strong>Missile Attack Ammo:</strong> {{ammoCounts.atkammo}}</li>
+            <li><strong>Missile Defense Ammo:</strong> {{ammoCounts.defammo}}</li>
+            <li><strong>CIWS Ammo:</strong> {{ammoCounts.ciwsammo}}</li>
+          </ul>
+        </section>
+
+        <h3>Items</h3>
+        <ul>
+          {{#each items}}
+            <li>{{name}} (Type: {{type}})
+              {{#if (eq type "missileAtk")}}
+                Damage: {{system.damage}}<br/>
+                Ammo: <input type="number" min="0" max="{{system.atkammo.max}}" 
+                             class="ammo-input" 
+                             data-item-id="{{_id}}" 
+                             data-ammo-type="atkammo"
+                             value="{{system.atkammo.value}}" />
+              {{/if}}
+
+              {{#if (eq type "missileDef")}}
+                Ammo: <input type="number" min="0" max="{{system.defammo.max}}" 
+                             class="ammo-input" 
+                             data-item-id="{{_id}}" 
+                             data-ammo-type="defammo"
+                             value="{{system.defammo.value}}" />
+              {{/if}}
+
+              {{#if (eq type "ciws")}}
+                Ammo: <input type="number" min="0" max="{{system.ciwsammo.max}}" 
+                             class="ammo-input" 
+                             data-item-id="{{_id}}" 
+                             data-ammo-type="ciwsammo"
+                             value="{{system.ciwsammo.value}}" />
+              {{/if}}
+
+              {{#if (eq type "radar")}}
+                Active: {{system.active}}<br/>
+                Active Ship Range: {{system.activeShipRange}}<br/>
+                Passive Ship Range: {{system.passiveShipRange}}
+              {{/if}}
+            </li>
+          {{/each}}
+        </ul>
+      </section>
+    {{/if}}
+  </section>
+</form>

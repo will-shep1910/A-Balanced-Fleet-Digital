@@ -1,0 +1,42 @@
+<form class="item-sheet">
+
+  <header>
+    <h1>{{name}}</h1>
+    <p>Type: {{type}}</p>
+  </header>
+
+  <section class="sheet-body">
+    {{#if (eq type "missileAtk")}}
+      <label>Damage:</label>
+      <input type="number" name="system.damage" value="{{system.damage}}" min="0" />
+      <label>Range:</label>
+      <input type="number" name="system.range" value="{{system.range}}" min="0" />
+      <label>Ammo:</label>
+      <input type="number" name="system.atkammo.value" value="{{system.atkammo.value}}" min="0" max="{{system.atkammo.max}}" />
+    {{/if}}
+
+    {{#if (eq type "missileDef")}}
+      <label>Ammo:</label>
+      <input type="number" name="system.defammo.value" value="{{system.defammo.value}}" min="0" max="{{system.defammo.max}}" />
+    {{/if}}
+
+    {{#if (eq type "ciws")}}
+      <label>Ammo:</label>
+      <input type="number" name="system.ciwsammo.value" value="{{system.ciwsammo.value}}" min="0" max="{{system.ciwsammo.max}}" />
+    {{/if}}
+
+    {{#if (eq type "radar")}}
+      <label>Active:</label>
+      <input type="checkbox" name="system.active" {{#if system.active}}checked{{/if}} />
+      <label>Active Ship Range:</label>
+      <input type="number" name="system.activeShipRange" value="{{system.activeShipRange}}" min="0" />
+      <label>Passive Ship Range:</label>
+      <input type="number" name="system.passiveShipRange" value="{{system.passiveShipRange}}" min="0" />
+      <label>Active Missile Range:</label>
+      <input type="number" name="system.activeMissileRange" value="{{system.activeMissileRange}}" min="0" />
+      <label>Passive Missile Range:</label>
+      <input type="number" name="system.passiveMissileRange" value="{{system.passiveMissileRange}}" min="0" />
+    {{/if}}
+  </section>
+
+</form>
