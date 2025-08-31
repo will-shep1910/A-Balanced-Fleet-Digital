@@ -1,0 +1,54 @@
+.actor-sheet, .item-sheet {
+  background-color: #f8f9fa; /* Light background */
+  color: #212529; /* Dark text */
+  padding: 1.5em;
+  border-radius: 10px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  max-width: 700px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.actor-sheet header, .item-sheet header {
+  border-bottom: 2px solid #007bff; /* Blue accent */
+  margin-bottom: 1.2em;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+  color: #0056b3;
+}
+
+.sheet-body label {
+  display: block;
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  color: #343a40;
+  font-size: 1rem;
+}
+
+.sheet-body input[type="number"],
+.sheet-body input[type="checkbox"],
+.sheet-body input[type="text"] {
+  width: 100%;
+  padding: 0.4em;
+  margin-top: 0.2em;
+  margin-bottom: 0.8em;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.ammo-input {
+  width: 5em !important;
+  font-weight: bold;
+  color: #856404;
+  border: 2px solid #ffc107;
+  background-color: #fff3cd;
+  padding: 0.3em;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.1rem;
+}

@@ -1,0 +1,59 @@
+<form class="item-sheet">
+
+  <header>
+    <h1>{{item.name}}</h1>
+    <p>Type: {{item.type}}</p>
+  </header>
+
+  <section class="sheet-body">
+
+    {{!-- Missile Attack Item --}}
+    {{#if (eq item.type "missileAtk")}}
+      <div class="missile-atk-section">
+        <label>Damage:</label>
+        <input type="number" name="system.damage" value="{{system.damage}}" min="0" />
+
+        <label>Range:</label>
+        <input type="number" name="system.range" value="{{system.range}}" min="0" />
+
+        <label>Ammo:</label>
+        <input type="number" name="system.atkammo.value" value="{{system.atkammo.value}}" min="0" max="{{system.atkammo.max}}" />
+        <span>/ {{system.atkammo.max}}</span>
+      </div>
+    {{/if}}
+
+    {{!-- Missile Defense Item --}}
+    {{#if (eq item.type "missileDef")}}
+      <div class="missile-def-section">
+        <label>Ammo:</label>
+        <input type="number" name="system.defammo.value" value="{{system.defammo.value}}" min="0" max="{{system.defammo.max}}" />
+        <span>/ {{system.defammo.max}}</span>
+      </div>
+    {{/if}}
+
+    {{!-- CIWS Item --}}
+    {{#if (eq item.type "ciws")}}
+      <div class="ciws-section">
+        <label>Ammo:</label>
+        <input type="number" name="system.ciwsammo.value" value="{{system.ciwsammo.value}}" min="0" max="{{system.ciwsammo.max}}" />
+        <span>/ {{system.ciwsammo.max}}</span>
+      </div>
+    {{/if}}
+
+    {{!-- Radar Item --}}
+    {{#if (eq item.type "radar")}}
+      <div class="radar-section">
+        <label>Radar Active:</label>
+        <input type="checkbox" name="system.active" {{#if system.active}}checked{{/if}} />
+
+        <label>Active Range:</label>
+        <input type="number" name="system.activeRange" value="{{system.activeRange}}" min="0" />
+
+        <label>Passive Range:</label>
+        <input type="number" name="system.passiveRange" value="{{system.passiveRange}}" min="0" />
+      </div>
+    {{/if}}
+
+  </section>
+
+</form>

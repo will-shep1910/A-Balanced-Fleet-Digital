@@ -1,0 +1,7 @@
+ABF or A Balanced Fleet by Dr Nick Bradbeer is released under the Creative Commons CC-BY-SA 4.0 license. 
+Further details can be found at https://creativecommons.org/licenses/by-nc-sa/4.0/. 
+This project falls under the same license and is not to be used commercially. 
+The project discussed is adapted from this source material. 
+This material and its source material may be shared and adapted but the original creator (Nick Bradbeer) must be credited, 
+and derivatives must be released under this same license.
+

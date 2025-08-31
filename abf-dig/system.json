@@ -1,0 +1,36 @@
+{
+  "id": "abf-dig",
+  "title": "ABF Digital",
+  "description": "",
+  "authors": [
+    {
+      "name": "Will Shepperson",
+      "email": ""
+    }
+  ],
+  "url": " ",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "systems/abf-dig/assets/anvil-impact.png",
+      "thumbnail": "systems/abf-dig/assets/anvil-impact.png"
+    }
+  ],
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": 11,
+    "verified": "11.315"
+  },
+  "scripts": [],
+  "esmodules": ["module/abf-dig.mjs"],
+  "styles": ["styles/abf-dig.css"],
+  "languages": [],
+  "packs": [],
+  "packFolders": [],
+  "background": "systems/abf-dig/assets/anvil-impact.png",
+  "gridDistance": 10,
+  "gridUnits": "nm",
+  "primaryTokenAttribute": "damage"
+}

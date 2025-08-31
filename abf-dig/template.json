@@ -1,0 +1,46 @@
+{
+  "Actor": {
+    "types": ["redShip", "blueShip"],
+    "redShip": {
+      "system": {
+        "attributes": {
+          "health": { "value": 2, "max": 2 }
+        }
+      }
+    },
+    "blueShip": {
+      "system": {
+        "attributes": {
+          "health": { "value": 2, "max": 2 }
+        }
+      }
+    }
+  },
+  "Item": {
+    "types": ["missileAtk", "missileDef", "ciws", "radar"],
+
+    "missileAtk": {
+      "system": {
+        "atkammo": { "value": 0, "max": 12 }
+      }
+    },
+    "missileDef": {
+      "system": {
+        "defammo": { "value": 0, "max": 32 }
+      }
+    },
+    "ciws": {
+      "system": {
+        "ciwsammo": { "value": 0, "max": 6 }
+      }
+    },
+
+    "radar": {
+      "system": {
+        "active": false,
+        "activeRange": 10,
+        "passiveRange": 5
+      }
+    }
+  }
+}
